@@ -37,5 +37,26 @@ print(guests[4] + message)
 print(guests[5] + message)
 print(guests[6] + message)
 
+print("")
+print("Sadly, Only 2 people can come to the dinner party now.")
+
+uninvite1 = guests.pop(6) #first guest to invite
+print("Sorry "+ uninvite1 +" but I must cancel your invitation.")
+uninvite2 = guests.pop(5)
+print("Sorry " + uninvite2 + " but I must cancel your invitation")
+uninvite3 = guests.pop(4)
+print("Sorry " + uninvite3 + " but I must cancel your invitation.")
+uninvite4 = guests.pop(3)
+print("Sorry " + uninvite4 + " but I must cancel your invitation.")
+uninvite5 = guests.pop(2)
+print("Sorry " + uninvite5 + " but I must uninvite you.")
+
+print("")
+print(guests[1] + " you are still invited to the party.")
+print(guests[0] + " you are still invited to the party.")
+
+del guests[1]
+del guests[0]
+print(guests)
 
 
