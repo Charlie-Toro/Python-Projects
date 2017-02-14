@@ -54,9 +54,11 @@ print("Sorry " + uninvite5 + " but I must uninvite you.")
 print("")
 print(guests[1] + " you are still invited to the party.")
 print(guests[0] + " you are still invited to the party.")
+print(len(guests))
 
 del guests[1]
 del guests[0]
 print(guests)
+
 
 
