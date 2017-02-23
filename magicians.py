@@ -9,13 +9,15 @@ def show_magicians(magicians):
 
 
 def make_great(magicians):
-    for magician in magicians:
-        magician = 'The Great ' + magician
-        return magician
+    great = "The Great "
+    magic = [great + magician for magician in magicians]
+    return magic
 
 
 magic = ['zambini', 'disappearo', 'magico']
 
-magicians = make_great(magic)
-show_magicians(magicians)
+
+mag = make_great(magic)
+show_magicians(mag)
+
 
