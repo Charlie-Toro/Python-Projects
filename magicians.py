@@ -14,10 +14,12 @@ def make_great(magicians):
     return magic
 
 
+
 magic = ['zambini', 'disappearo', 'magico']
 
 
-mag = make_great(magic)
+mag = make_great(magic[:])
 show_magicians(mag)
+
 
 
