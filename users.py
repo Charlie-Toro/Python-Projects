@@ -10,6 +10,7 @@ class User:
         self.last_name = last_name
         self.location = location
         self.facts = facts
+        self.login_attempts = 0
 
     def describe_user(self):
         user_facts = {}
@@ -24,12 +25,22 @@ class User:
     def greet_user(self):
         print("Hello " + self.first_name + " " + self.last_name)
 
+    def increment_login_attempts(self):
+        attempts = self.login_attempts + 1
+        return attempts
 
-new_user = User("Mark", "Perry", "Austin,TX", DOB='12/4/67', Car='Ferrari', Pets='Dog')
+    def reset_login_attempts(self):
+        self.login_attempts = 0
+
+new_user = User("Mark","Perry", "Austin,TX" ,
+                DOB='12/4/67', Car='Ferrari', Pets='Dog')
 print(new_user.first_name)
 print(new_user.last_name)
 print(new_user.location)
 print(new_user.facts)
+
+attempt = new_user.increment_login_attempts() * 100
+print(attempt)
 
 new_user.describe_user()
 new_user.greet_user()
