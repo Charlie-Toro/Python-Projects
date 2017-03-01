@@ -33,3 +33,25 @@ print(restaurant.cuisine_type.title())
 restaurant.describe_restaurant()
 restaurant.open_restaurant()
 print(restaurant.increment_number_served(50))
+
+
+class IceCreamStand(Restaurant):
+
+    def __init__(self, restaurant_name, cuisine_type, *flavors):
+        super(IceCreamStand, self).__init__(restaurant_name, cuisine_type, *flavors)
+        self.flavors = flavors
+
+        def display_flavors(self):
+            for flavor in self.flavors:
+                print(flavor)
+
+
+ice_cream_stand = IceCreamStand("Frosty's", "Ice Cream", "Vanilla", "Chocolate","Cheesecake", "Strawberry", "Mint")
+
+ice_cream_stand.display_flavors()
+
+
+
+
+
+
