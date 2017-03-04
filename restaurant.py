@@ -37,18 +37,25 @@ print(restaurant.increment_number_served(50))
 
 class IceCreamStand(Restaurant):
 
-    def __init__(self, restaurant_name, cuisine_type, *flavors):
-        super(IceCreamStand, self).__init__(restaurant_name, cuisine_type, *flavors)
+    def __init__(self, restaurant_name, cuisine_type):
+        super(IceCreamStand, self).__init__(restaurant_name, cuisine_type)
+        self.flavors = []
+
+    def set_flavors(self, *flavors):
         self.flavors = flavors
+        return flavors
 
-        def display_flavors(self):
-            for flavor in self.flavors:
-                print(flavor)
+    def get_flavors(self, *flavors):
+        for flavor in flavors:
+            print(flavor)
 
 
-ice_cream_stand = IceCreamStand("Frosty's", "Ice Cream", "Vanilla", "Chocolate","Cheesecake", "Strawberry", "Mint")
+ice_cream_stand = IceCreamStand("Frosty's", "Ice Cream")
+ice_cream_stand.describe_restaurant()
 
-ice_cream_stand.display_flavors()
+flavors = ice_cream_stand.set_flavors('cheesecake', 'vanilla', 'chocolate', 'strawberry')
+
+ice_cream_stand.get_flavors(flavors)
 
 
 
