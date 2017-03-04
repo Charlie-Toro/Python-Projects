@@ -46,26 +46,28 @@ new_user.describe_user()
 new_user.greet_user()
 
 
+class Privilege:
+
+    def __init__(self, *privileges):
+        self.privileges = privileges
+
+    def show_privileges(self):
+        for privilege in self.privileges:
+            print(privilege)
+
+
 class Admin(User):
 
     def __init__(self, first_name, last_name, location, **facts):
         super().__init__(first_name, last_name, location, **facts)
-        self.privileges = []
+        self.privilege = Privilege("make user", "delete user", "read files")
 
-    def set_privileges(self, *privileges):
-        self.privileges = privileges
-        return privileges
-
-    def get_privileges(self, *privileges):
-        for privilege in privileges:
-            print(privilege)
 
 administrator = Admin('Admin', 'Bell', 'Baltimore, MD',)
 print(administrator.first_name)
 print(administrator.last_name)
 print(administrator.location)
-priv = administrator.set_privileges('can read files', 'can write files', 'can execute files')
-administrator.get_privileges(priv)
+administrator.privilege.show_privileges()
 
 
 
