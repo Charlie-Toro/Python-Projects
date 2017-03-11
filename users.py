@@ -32,19 +32,6 @@ class User:
     def reset_login_attempts(self):
         self.login_attempts = 0
 
-new_user = User("Mark","Perry", "Austin,TX" ,
-                DOB='12/4/67', Car='Ferrari', Pets='Dog')
-print(new_user.first_name)
-print(new_user.last_name)
-print(new_user.location)
-print(new_user.facts)
-
-attempt = new_user.increment_login_attempts() * 100
-print(attempt)
-
-new_user.describe_user()
-new_user.greet_user()
-
 
 class Privilege:
 
@@ -63,11 +50,6 @@ class Admin(User):
         self.privilege = Privilege("make user", "delete user", "read files")
 
 
-administrator = Admin('Admin', 'Bell', 'Baltimore, MD',)
-print(administrator.first_name)
-print(administrator.last_name)
-print(administrator.location)
-administrator.privilege.show_privileges()
 
 
 
