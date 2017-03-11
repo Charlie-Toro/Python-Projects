@@ -26,15 +26,6 @@ class Restaurant:
         return self.number_served
 
 
-restaurant = Restaurant("Nando's Peri Peri", "Peruvian Cuisine")
-print(restaurant.restaurant_name.title())
-print(restaurant.cuisine_type.title())
-
-restaurant.describe_restaurant()
-restaurant.open_restaurant()
-print(restaurant.increment_number_served(50))
-
-
 class IceCreamStand(Restaurant):
 
     def __init__(self, restaurant_name, cuisine_type):
@@ -50,12 +41,6 @@ class IceCreamStand(Restaurant):
             print(flavor)
 
 
-ice_cream_stand = IceCreamStand("Frosty's", "Ice Cream")
-ice_cream_stand.describe_restaurant()
-
-flavors = ice_cream_stand.set_flavors('cheesecake', 'vanilla', 'chocolate', 'strawberry')
-
-ice_cream_stand.get_flavors(flavors)
 
 
 
