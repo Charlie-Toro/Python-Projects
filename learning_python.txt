@@ -1,0 +1,4 @@
+In Python you can take user input
+In Python you can use tuples
+In Python you can read files
+In Python you can write files
