@@ -29,7 +29,7 @@ class Restaurant:
 class IceCreamStand(Restaurant):
 
     def __init__(self, restaurant_name, cuisine_type):
-        super(IceCreamStand, self).__init__(restaurant_name, cuisine_type)
+        super().__init__(restaurant_name, cuisine_type)
         self.flavors = []
 
     def set_flavors(self, *flavors):
